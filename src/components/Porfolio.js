@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { projetsPerso, projetsPro } from '../data'
 import styled from 'styled-components'
 import Avis from './Avis'
@@ -15,7 +15,7 @@ function Porfolio() {
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -60,10 +60,9 @@ function Porfolio() {
         cursor: pointer;
       }
     `
-
     return (
       <DIV
-        className="card col-5 m-5"
+        className="card col-12 col-md-5 m-3"
         onClick={() => findElementById(array, id)}
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
@@ -79,13 +78,13 @@ function Porfolio() {
   return (
     <React.Fragment>
       <section>
-        <div>
+        <div className="my-5">
           <h3 className="fw-bold text-center text-decoration-underline">
             Bienvenue sur mon{' '}
             <span style={{ color: '#652c87' }}>PORTFOLIO</span>
           </h3>
           <p
-            className="text-center row p-5 text-white my-5"
+            className="text-center row p-5 text-white my-3"
             style={{ backgroundColor: '#652c87' }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -105,7 +104,7 @@ function Porfolio() {
           </p>
         </div>
 
-        <div>
+        <div className="my-5">
           <h3 className="fw-bold text-center fst-italic">
             Projets <span style={{ color: '#652c87' }}>Professionels</span>
           </h3>

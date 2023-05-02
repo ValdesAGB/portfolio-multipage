@@ -7,10 +7,14 @@ function Avis() {
 
   const card = (id, cover, name) => {
     return (
-      <div class="card col-4 m-2" style={{ border: 'solid 2px #652c87' }}>
-        <div class="card-body">
+      <div
+        key={id}
+        className="card col-12 col-md-4 m-2"
+        style={{ border: 'solid 2px #652c87' }}
+      >
+        <div className="card-body">
           <div className="row align-items-center">
-            <h5 class="card-title col-8">{name}</h5>
+            <h5 className="card-title col-8">{name}</h5>
             <div className="col">
               <img
                 src={cover}
@@ -26,7 +30,7 @@ function Avis() {
               />
             </div>
           </div>
-          <p class="card-text fst-italic mt-2">
+          <p className="card-text fst-italic mt-2">
             "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
             commodo consequat. Duis aute irure dolor in reprehenderit in
             voluptate."
@@ -58,14 +62,14 @@ function Avis() {
           {pathActuel === '/' ? (
             <Link
               to="/biographie"
-              className="btn col-3 fw-bold border-0 text-white"
+              className="btn col-11 col-md-3 fw-bold border-0 text-white"
               style={{ backgroundColor: ' #652c87' }}
             >
               Visitez mes services et avis clients
             </Link>
           ) : all < avis.length ? (
             <button
-              className="btn col-2 "
+              className="btn col-8 col-md-2 "
               style={{ border: 'solid 2px #652c87' }}
               onClick={() => setAll(avis.length)}
             >
@@ -73,7 +77,7 @@ function Avis() {
             </button>
           ) : all === avis.length ? (
             <button
-              className="btn col-2 "
+              className="btn col-8 col-md-2 "
               style={{ border: 'solid 2px #652c87' }}
               onClick={() => setAll(3)}
             >

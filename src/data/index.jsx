@@ -215,3 +215,18 @@ export const contact = [
     text: 'Disponible 7j/7',
   },
 ]
+
+export const menu = [
+  {
+    id: '1',
+    to: 'biographie',
+  },
+  {
+    id: '2',
+    to: 'portfolio',
+  },
+  {
+    id: '3',
+    to: 'contact',
+  },
+]

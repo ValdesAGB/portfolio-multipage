@@ -5,17 +5,20 @@ function Contact() {
   const card = (id, icone, text, number) => {
     return (
       <div
-        class="card text-center col-4 m-2 "
+        key={id}
+        className="card text-center col-12 col-md-6 col-lg-4 m-2 "
         style={{
           border: 'solid 2px #652c87',
         }}
       >
-        <div class="card-body ">
-          <h5 class="card-title">
+        <div className="card-body ">
+          <h5 className="card-title">
             <i className={`fs-3 bi ${icone}`} style={{ color: '#652c87' }} />
           </h5>
-          <p class="card-text  my-4 ">{text}</p>
-          <h6 class="card-subtitle mb-2 fs-2 text-body-secondary">{number}</h6>
+          <p className="card-text  my-4 ">{text}</p>
+          <h6 className="card-subtitle mb-2 fs-2 text-body-secondary">
+            {number}
+          </h6>
         </div>
       </div>
     )
@@ -23,16 +26,15 @@ function Contact() {
 
   return (
     <React.Fragment>
-      <section className="my-4">
+      <section className="my-5">
         <div className="row">
           <h3 className="fw-bold text-center">
             Vous avez besoin de <span style={{ color: '#652c87' }}>moi</span>
             .?
           </h3>
           <p
-            className="p-5 text-white mt-3"
+            className="p-5 text-white mt-3 text-center text-md-start"
             style={{ backgroundColor: '#652c87' }}
-            s
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -43,9 +45,10 @@ function Contact() {
             culpa qui officia deserunt mollit anim id est laborum
           </p>
         </div>
+
         <div className="container">
-          <div className="row align-items-center my-5">
-            <div className="col-7 row justify-content-center align-items-center ">
+          <div className="row align-items-center justify-content-center my-5">
+            <div className="row col-12 col-md justify-content-center mb-5 mb-md-0">
               <h2 className="text-center" style={{ color: '#652c87' }}>
                 Coordonnées
               </h2>
@@ -53,7 +56,8 @@ function Contact() {
                 card(id, icone, text, number)
               )}
             </div>
-            <div className="col">
+            <hr className="d-lg-none " />
+            <div className="col-12 col-md ">
               <form>
                 <div className="mb-3 row ">
                   <div className="col-6">

@@ -17,8 +17,8 @@ function Footer() {
   return (
     <React.Fragment>
       <footer className="mt-5">
-        <div className="row bg-secondary text-white p-5">
-          <div className="col">
+        <div className="row bg-secondary text-white p-4 text-center text-md-start">
+          <div className="col-12 col-md my-3 my-md-0">
             <Link
               to="/"
               className="fw-bolder text-white text-decoration-none fs-4"
@@ -32,9 +32,9 @@ function Footer() {
               TOWNSEND
             </Link>
           </div>
-          <div className="col text-end">
+          <div className="col-12 col-md text-md-end mt-3 mt-md-0">
             {networks.map(({ id, icone }) => (
-              <span key={id} className="mx-2">
+              <span key={id} className="mx-2 ">
                 <Networks
                   type="button"
                   className={`fs-4 bi  ${icone}`}

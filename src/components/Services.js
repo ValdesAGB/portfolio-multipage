@@ -4,13 +4,15 @@ import { services } from '../data'
 function Services() {
   const Card = (id, icone, title) => {
     return (
-      <div class="card col-5 m-2 border-0" key={id}>
-        <div class="card-body">
-          <h5 class="card-title">
+      <div className="card col-12 col-md-5 m-2 border-0" key={id}>
+        <div className="card-body">
+          <h5 className="card-title">
             <i className={`fs-1 ${icone}`} style={{ color: '#652c87' }} />
           </h5>
-          <h6 class="card-subtitle mb-2 text-body-secondary fs-3">{title}</h6>
-          <p class="card-text">
+          <h6 className="card-subtitle mb-2 text-body-secondary fs-3">
+            {title}
+          </h6>
+          <p className="card-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
